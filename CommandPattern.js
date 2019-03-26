@@ -1,3 +1,7 @@
+carManager.execute = function ( name ) {
+  return carManager[name] && carManager[name].apply( carManager, [].slice.call(arguments, 1) );
+};
+
 (function(){
 
   var carManager = {
@@ -27,3 +31,5 @@ carManager.execute( "arrangeViewing", "Ferrari", "14523" );
 carManager.execute( "requestInfo", "Ford Mondeo", "54323" );
 carManager.execute( "requestInfo", "Ford Escort", "34232" );
 carManager.execute( "buyVehicle", "Ford Escort", "34232" );
+
+
